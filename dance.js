@@ -26,13 +26,13 @@ function onLoad(){
 	container.appendChild(renderer.domElement);
 	scene = new THREE.Scene();
 	scene.background = new THREE.Color( 0x222222 );
-	camera = new THREE.PerspectiveCamera(100, wid/hei, 0.1, 10000);
+	camera = new THREE.PerspectiveCamera(100, wid/hei, 0.1, 1000);
 
 	dollyCam = new THREE.PerspectiveCamera();
 	dollyCam.add(camera);
 	scene.add(dollyCam);
 
-	dollyCam.position.set(0, -400, 450);
+	dollyCam.position.set(0, -100, 450);
 	//dollyCam.target.set(0, -10, 0);
 	//camera.target.set(0,-10,0);
 
@@ -140,10 +140,10 @@ function createEnvironment(){
 	let circle = new THREE.SphereGeometry( 50, 50, 50 );
 	let circMaterial = new THREE.MeshPhongMaterial( {color: 0xffffff} );
 
-	for (let r=1;r<7;r++) {
+	for (let r=1;r<30;r++) {
 		let circleMesh = new THREE.Mesh( circle, circMaterial );
 		circles.push(circleMesh);
-		circleMesh.position.set(THREE.Math.randInt(-400,400), -450, THREE.Math.randInt(-400,0));
+		circleMesh.position.set(THREE.Math.randInt(-400,400), -450, THREE.Math.randInt(-400,400));
 		circleMesh.castShadow = true;
 		circleMesh.receiveShadow = false;
 		scene.add( circleMesh );
