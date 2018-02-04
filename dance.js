@@ -32,7 +32,7 @@ function onLoad(){
 	dollyCam.add(camera);
 	scene.add(dollyCam);
 
-	dollyCam.position.set(0, -400, 450);
+	dollyCam.position.set(0, -200, 450);
 	//dollyCam.target.set(0, -10, 0);
 	//camera.target.set(0,-10,0);
 
@@ -140,7 +140,7 @@ function createEnvironment(){
 	let circle = new THREE.SphereGeometry( 50, 50, 50 );
 	let circMaterial = new THREE.MeshPhongMaterial( {color: 0xffffff} );
 
-	for (let r=1;r<20;r++) {
+	for (let r=1;r<10;r++) {
 		let circleMesh = new THREE.Mesh( circle, circMaterial );
 		circles.push(circleMesh);
 		circleMesh.position.set(THREE.Math.randInt(-400,400), -450, THREE.Math.randInt(-400,100));
