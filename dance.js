@@ -26,13 +26,13 @@ function onLoad(){
 	container.appendChild(renderer.domElement);
 	scene = new THREE.Scene();
 	scene.background = new THREE.Color( 0x222222 );
-	camera = new THREE.PerspectiveCamera(150, wid/hei, 0.1, 1000);
+	camera = new THREE.PerspectiveCamera(100, wid/hei, 0.1, 1000);
 
 	dollyCam = new THREE.PerspectiveCamera();
 	dollyCam.add(camera);
 	scene.add(dollyCam);
 
-	dollyCam.position.set(0, -100, 450);
+	dollyCam.position.set(0, -400, 450);
 	//dollyCam.target.set(0, -10, 0);
 	//camera.target.set(0,-10,0);
 
